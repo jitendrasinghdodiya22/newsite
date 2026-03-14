@@ -1,0 +1,24 @@
+<sly data-sly-use.model="com.mysite.core.models.CardModel">
+    <div class="service-card">
+
+        <!-- Card Icon -->
+        <div class="card-icon" data-sly-test="${model.cardIcon}">
+            ${model.cardIcon}
+        </div>
+
+        <!-- Card Title -->
+        <h3 class="card-title">${model.cardTitle}</h3>
+
+        <!-- Card Description -->
+        <p class="card-description">${model.cardDescription}</p>
+
+        <!-- Card Link (Optional) -->
+        <div class="card-link-wrapper" data-sly-test="${model.hasLink}">
+            <a href="${model.cardLink @ extension='html'}"
+               class="card-link">
+                ${model.cardLinkText}
+            </a>
+        </div>
+
+    </div>
+</sly>
